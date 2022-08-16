@@ -1,10 +1,10 @@
 from func import *
 from case_1 import *
 url = 'https://www.vpin.club/main?sort=date'
-wd = webdriver.Chrome()
-wd.get(url)
+wd = driver_init(url)
+driver_wait_by_class_name(wd,30,'main-style')
 
-driver_wait(wd,30,'main-style')
+print('driver init OK')
 
-print('OK')
-wd.quit()
+run_case(wd)
+#wd.quit()
