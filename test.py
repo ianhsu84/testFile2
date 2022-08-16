@@ -27,11 +27,11 @@ def search_click(webdriver):
     time.sleep(1)
     find_element_by_id(webdriver,'header-search').click()
 
-#if __name__== '__main__':
-url = 'https://www.vpin.club/main?sort=date'
-wd = driver_init(url)
-driver_wait_by_class_name(wd,30,'main-style')
-print('driver init OK')
+if __name__== '__main__':
+    url = 'https://www.vpin.club/main?sort=date'
+    wd = driver_init(url)
+    driver_wait_by_class_name(wd,30,'main-style')
+    print('driver init OK')
 
-search_click(webdriver)
-print('search ok')
+    search_click(webdriver)
+    print('search ok')
